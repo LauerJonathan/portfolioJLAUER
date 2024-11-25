@@ -1,0 +1,97 @@
+.lastDisplayerCont h1 {
+  font-size: 2em;
+  width: 100%;
+  color: var(--primary);
+  margin: 30px 0 0 50px;
+}
+
+.lastDisplayerCont .seemore {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.lastDisplayerCont .seemore a {
+  background-color: var(--primaryClear);
+  padding: 20px 30px;
+  border-radius: 20px;
+  border: 2px solid var(--primary);
+  transition: 500ms;
+}
+
+.lastDisplayerCont .seemore a:hover {
+  transform: scale(1.2);
+  background-color: var(--primary);
+  transition: 500ms;
+}
+
+.lastDisplayer {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+}
+
+.lastDisplayer > a {
+  display: block;
+  width: calc(100% / 3);
+  height: calc((80vw - 20px - 40px - 20px) / 4);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 4px solid var(--primary);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  cursor: pointer;
+  transition: 500ms;
+  background-color: white;
+}
+
+.lastDisplayer > div:hover {
+  transform: scale(1.1);
+  transition: 500ms;
+}
+
+.lastDisplayer a h2 {
+  background-color: rgb(37, 36, 36);
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.1em;
+}
+
+.lastDisplayer a img {
+  width: 100%;
+  object-position: top;
+  border-radius: 0 0 10px 10px;
+  object-fit: fill;
+}
+
+@media only screen and (max-width: 900px) {
+  .lastDisplayer {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .lastDisplayerCont h1 {
+    font-size: 1.6em;
+    text-align: center;
+    margin: 30px 0;
+  }
+  .lastDisplayer > a {
+    width: 100%;
+    height: calc((80vw - 20px - 40px - 20px) / 1.5);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .lastDisplayerCont h1 {
+    font-size: 1.1em;
+  }
+  .lastDisplayer {
+    padding: 0;
+  }
+  .lastDisplayer > a {
+    height: 240px;
+  }
+}

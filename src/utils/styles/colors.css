@@ -1,0 +1,46 @@
+/******************************************
+**** Define your project's colors here ****
+******************************************/
+
+:root {
+  font-display: swap;
+  --primary: rgb(30, 22, 50);
+  --primaryOPAC80: rgba(30, 22, 50, 0.8);
+  --primaryClear: rgb(65, 51, 101);
+  --primaryClear2: rgb(174, 165, 197);
+  --secondary: blue;
+  --tertiary: green;
+  --darkgrey: #2e2929;
+}
+
+.primary.bg {
+  background-color: var(--primary);
+}
+
+.primaryClear.bg {
+  background-color: var(--primmaryClear);
+}
+
+.secondary.bg {
+  background-color: var(--secondary);
+}
+
+.tertiary.bg {
+  background-color: var(--tertiary);
+}
+
+.primary.txt {
+  color: var(--primary);
+}
+
+.secondary.txt {
+  color: var(--secondary);
+}
+
+.tertiary.txt {
+  color: var(--tertiary);
+}
+
+.whitetxt {
+  color: white;
+}

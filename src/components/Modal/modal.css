@@ -1,0 +1,45 @@
+section.modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(47, 41, 41, 0.671);
+  backdrop-filter: blur(10px) grayscale(80%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+}
+.modal .content {
+  position: relative;
+  width: 80%;
+  max-width: 400px;
+  background-color: #222222;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid white;
+}
+
+.modal .content .link {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.modal .content .link:not(:last-child) {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 12px;
+}
+
+.modal .content .link:last-child {
+  padding-top: 10px;
+}
+
+.modal .close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: var(--primaryClear);
+  color: white;
+  border: 2px solid white;
+}

@@ -1,0 +1,84 @@
+.prjContainer {
+  display: flex;
+  padding: 5px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.prj h1 {
+  font-size: 3em;
+  margin: 20px 0 30px 30px;
+  color: var(--primary);
+}
+
+.prjContainer .card {
+  width: calc(100% / 3 - 7px);
+  background-color: rgb(37, 35, 35);
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.prjContainer .card h2 {
+  color: white;
+  border-radius: 10px 0;
+}
+
+.prjContainer .card p {
+  display: block;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 100px;
+  max-height: 100px;
+  color: white;
+  text-overflow: ellipsis;
+  overflow: scroll;
+}
+
+.prjContainer .card ul {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.prjContainer .card ul li {
+  width: max-content;
+  padding: 5px;
+  color: var(--primary);
+  background-color: var(--primaryClear2);
+  border: 2px solid var(--primary);
+}
+
+.prjContainer img {
+  width: 100%;
+  height: 280px;
+  object-fit: fill;
+  object-position: top, center;
+}
+
+@media only screen and (max-width: 1500px) {
+  .prjContainer .card {
+    width: calc(100% / 2 - 7px);
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .prjContainer .card {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .prj h1 {
+    font-size: 2em;
+    margin: 30px 0 30px 20px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .prj h1 {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+  }
+}

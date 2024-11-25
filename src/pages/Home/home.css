@@ -1,0 +1,109 @@
+@keyframes monter {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-220px);
+  }
+}
+
+section.content {
+  position: relative;
+  top: calc(300px + 5vw);
+  width: 80%;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+  padding: 10px;
+  animation: monter 1s ease forwards;
+  z-index: 2;
+  margin-bottom: 30vw !important;
+}
+
+section.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.aboutMe {
+  display: flex;
+  align-items: flex-start;
+  padding: 3vw;
+  gap: 5vw;
+}
+
+.aboutMe h1 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: var(--primary);
+}
+
+.aboutMe h1 span {
+  display: block;
+  font-size: 0.5em;
+  font-weight: 300;
+}
+
+.aboutMe img {
+  width: 160px;
+  height: 200px;
+  object-fit: scale-down;
+}
+
+.aboutMe p {
+  padding-top: 10px;
+  text-align: justify;
+}
+
+.aboutMe p > .under-title {
+  display: block;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 2px;
+  margin-bottom: 10px;
+}
+
+.frontImg {
+  position: fixed;
+  bottom: -10vw;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.skills img {
+  width: 60%;
+}
+
+@media only screen and (max-width: 700px) {
+  section.content {
+    width: 85%;
+    top: calc(300px + 2vw);
+    margin-bottom: 50vw !important;
+  }
+  .frontImg {
+    bottom: 0;
+  }
+  .aboutMe {
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutMe h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  section.content {
+    width: 95%;
+  }
+  .aboutMe h1 {
+    font-size: 1.3em;
+  }
+}
