@@ -2,7 +2,7 @@ import { useContext, useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import { LangContext } from "../../utils/context";
 import "./contact.css";
-import Modal from "../Modal";
+import Modal from "../ChoiceModal";
 import { Link } from "react-router-dom";
 
 const Contact = () => {

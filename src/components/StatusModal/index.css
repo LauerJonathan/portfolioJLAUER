@@ -1,0 +1,101 @@
+.statusModal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.statusModal .modal--content {
+  position: relative;
+  width: 50vw;
+  height: 200px;
+  background-color: var(--primaryClear2);
+  border-radius: 20px;
+  border: 6px solid var(--primary);
+  color: var(--primary);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.statusModal .crossClosing {
+  background-color: var(--primaryClear2);
+  width: 30px;
+  height: 30px;
+  border: 4px solid var(--primary);
+  color: var(--primary);
+  font-weight: bold;
+  border-radius: 15px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  transition: 500ms;
+}
+
+.statusModal .crossClosing:hover {
+  transform: scale(1.1);
+  background-color: var(--primary);
+  color: white;
+  transition: 500ms;
+}
+
+/* Texte de la modal */
+.modal-text {
+  margin: 20px 0;
+  color: #306e32;
+}
+
+.modal-text.error {
+  color: red;
+}
+
+/* Barre de progression */
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  background-color: #4caf50; /* Vert */
+  width: 100%;
+  box-sizing: border-box;
+  animation-name: progressBarAnimation;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.progress-bar.error {
+  background-color: red;
+}
+
+/* Animation de la barre */
+@keyframes progressBarAnimation {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .statusModal {
+    padding-top: 50px;
+  }
+  .statusModal .modal--content {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .statusModal .modal--content {
+    width: 80%;
+  }
+}

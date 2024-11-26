@@ -1,4 +1,5 @@
 import NavBar from "../../components/NavBar";
+import StatusModal from "../../components/StatusModal";
 import { useContext, useState, useRef, useEffect } from "react";
 import { ThemeContext, LangContext } from "../../utils/context";
 import frontImg from "../../assets/moutains-front.svg";
@@ -16,10 +17,22 @@ const Contact = () => {
   const [to, setTo] = useState(""); // Default email, can be changed by user
   const [subject, setSubject] = useState("");
   const [text, setText] = useState("");
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState({
+    code: null,
+    en: "Message sent successfully!",
+    fr: "Message envoyé avec succès !",
+  });
+
+  /****** StautModal ******/
+  const [modalState, setModalState] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    setStatus({
+      en: "Message sent successfully!",
+      fr: "Message envoyé avec succès !",
+    });
 
     const templateParams = {
       to_email: to, // Utilisez l'adresse e-mail de l'utilisateur ou par défaut
@@ -37,12 +50,22 @@ const Contact = () => {
         templateParams,
         "qq6hcCYG21-8Ir9pM" // Votre ID d'utilisateur
       );
-
-      console.log("Message envoyé:", result.text);
-      setStatus("Message envoyé avec succès!");
+      setStatus({
+        code: 200,
+        en: "Message sent successfully!",
+        fr: "Message envoyé avec succès !",
+      });
+      setModalState(true);
+      setTo("");
+      setSubject("");
+      setText("");
     } catch (error) {
-      console.error("Erreur d'envoi d'email:", error);
-      setStatus("Erreur lors de l'envoi du message.");
+      setStatus({
+        code: 500,
+        en: "Error while sending the message.",
+        fr: "Erreur lors de l'envoi du message.",
+      });
+      setModalState(true);
     }
   };
 
@@ -77,6 +100,7 @@ const Contact = () => {
 
   return (
     <>
+      {modalState && <StatusModal content={status} stateFct={setModalState} />}
       <div className={`bgConfig ${theme === "dark" ? "dark" : "day"}`}></div>
       {theme === "dark" ? <div className="starsConfig"></div> : ""}
       <header>
