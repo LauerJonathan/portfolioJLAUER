@@ -1,5 +1,6 @@
 footer {
-  color: rgba(255, 255, 255, 0.439);
+  color: red;
+  background-color: red;
   width: 100%;
   text-align: center;
   position: fixed;

@@ -23,16 +23,16 @@ const Contact = () => {
     fr: "Message envoyé avec succès !",
   });
 
-  /****** StautModal ******/
+  /****** StatusModal ******/
   const [modalState, setModalState] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    setStatus({
+    {/*setStatus({
       en: "Message sent successfully!",
       fr: "Message envoyé avec succès !",
-    });
+    });*/}
 
     const templateParams = {
       to_email: to, // Utilisez l'adresse e-mail de l'utilisateur ou par défaut

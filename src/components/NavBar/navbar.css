@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap");
+
 nav {
   width: 100vw;
   height: 80px;
@@ -14,12 +16,6 @@ nav .navContent {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-nav .logo {
-  font-family: "Playwrite GB S", cursive;
-  color: white;
-  display: none;
 }
 
 nav img {
@@ -51,6 +47,12 @@ nav ul li {
   text-underline-offset: 8px;
 }
 
+nav ul li > * {
+  font-family: "ADLaM Display", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
 nav ul li:hover {
   transform: scale(1.1);
   transition: 500ms;
@@ -77,6 +79,7 @@ nav > button {
     align-items: center;
   }
   nav .navContent {
+    width: 100vw !important;
     background-color: var(--primaryOPAC80) !important;
     backdrop-filter: blur(10px);
   }

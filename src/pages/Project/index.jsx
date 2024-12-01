@@ -10,11 +10,6 @@ import Footer from "../../components/Footer";
 
 import { projects } from "../../utils/data/projects";
 
-/**
- * IMG provisoire :
- */
-import prvIMG from "../../assets/portfolio.webp";
-
 const Projects = () => {
   const { theme } = useContext(ThemeContext);
   const { lang } = useContext(LangContext);
